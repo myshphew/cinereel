@@ -1,4 +1,5 @@
 import HeroGalleryGrid from "../components/HeroGalleryGrid";
+import SearchBar from "../components/SearchBar";
 export default function Hero() {
   return (
     <div className="relative px-12 h-dvh flex items-center overflow-hidden bg-[#AD2F18] text-[#EBD9CD] ">
@@ -14,6 +15,7 @@ export default function Hero() {
           Explore movies and shows, discover what’s trending, and find your next
           favorite reel—all in one place.
         </p>
+        <SearchBar/>
       </div>
       <HeroGalleryGrid />
       <div className="absolute right-0 top-1/2 -translate-y-1/2">
@@ -22,7 +24,7 @@ export default function Hero() {
       <div className="absolute right-0 top-1/2 -translate-y-64 -translate-x-24">
         <img src="/butterfly.avif" alt="butterfly" className="h-80" />
       </div>
-      <div className="absolute right-0 bottom-1 -translate-y-8 -translate-x-130">
+      <div className="absolute right-0 bottom-1 -translate-y-12 -translate-x-124">
         <img src="/cassettes.avif" alt="cassettes" className="h-64" />
       </div>
     </div>

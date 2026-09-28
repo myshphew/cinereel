@@ -19,7 +19,7 @@ const images = [
 
 export default function ImageGrid() {
   return (
-    <div className="-ml-20 h-fit w-fit grid grid-cols-5 gap-3">
+    <div className="-ml-16 h-fit w-fit grid grid-cols-5 gap-3">
       {/* Row 1 — Col 1 */}
       <div className="w-32 h-43 flex flex-col items-end justify-end text-left font-body text-xs">
         <p>A better way</p>
