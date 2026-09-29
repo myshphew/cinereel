@@ -6,3 +6,7 @@
   --font-display: "Oswald", sans-serif;
   --font-body: "Plus Jakarta Sans", sans-serif;
 }
+
+:root{
+  background: #F1E9D6;
+}
