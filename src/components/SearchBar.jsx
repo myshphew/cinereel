@@ -1,7 +1,7 @@
 import { Search } from "lucide-react";
 import { useState } from "react";
 
-export default function SearchBar({ setResults }) {
+export default function SearchBar({ setResults, onSearch }) {
   const [search, setSearch] = useState("");
 
   function handleSearch(event) {
@@ -18,7 +18,8 @@ export default function SearchBar({ setResults }) {
 
       const data = await response.json();
 
-      setResults(data);
+      setResults(data.map((result) => result.show));
+      onSearch?.();
     } catch (error) {
       console.error("Search failed:", error);
     }
@@ -31,16 +32,15 @@ export default function SearchBar({ setResults }) {
   }
 
   return (
-    <div className="flex p-3 w-full max-w-lg text-[#1F1D1D] bg-[#E9DFC8]  border-[#1F1D1E] items-center gap-3">
+    <div className="flex w-full max-w-lg items-center gap-3 bg-[#EBD9CD] p-3 text-[#1F1D1E]">
       <input
         type="text"
         value={search}
         onChange={handleSearch}
         onKeyDown={handleKeyDown}
         placeholder="What will you watch tonight?"
-        className="flex-1 font-body text-base font-medium outline-none placeholder:text-[#1F1D1D50]"
+        className="flex-1 font-body text-base font-medium outline-none placeholder:text-[#1F1D1E50]"
       />
-
       <button onClick={handleSearchSubmit} type="button">
         <Search size={18} strokeWidth={1.5} />
       </button>

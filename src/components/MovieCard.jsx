@@ -8,11 +8,9 @@ export default function MovieCard({ movie }) {
         alt={movie.name}
         className="w-full aspect-3/4 object-cover"
       />
-
       <h2 className="mt-4 font-display text-2xl/normal font-semibold uppercase">
         {movie.name}
       </h2>
-
       <p className="font-body text-sm opacity-50">{year ?? "N/A"}</p>
     </div>
   );

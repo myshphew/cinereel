@@ -5,16 +5,11 @@ import { RouterProvider } from "react-router/dom";
 import "./index.css";
 import App from "./App.jsx";
 import BrowseMovies from "./pages/BrowseMovies.jsx";
-import SearchResult from "./pages/SearchResult.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/search",
-    element: <SearchResult />,
   },
   {
     path: "/browse",
